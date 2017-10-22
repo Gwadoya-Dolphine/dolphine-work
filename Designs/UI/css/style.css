@@ -1,0 +1,50 @@
+.header{
+	background-color:#dd7632;
+
+	height: 150px;
+}
+#logo{
+	margin-top:10px;}
+
+#video h2{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 26px;
+	color: black;
+}
+#video p{
+	text-align: center;
+	font-size: 18px;
+}
+#video {
+	text-align: center;
+	margin-top: 60px;
+}
+#form{
+	background-color: #5b1a00;
+	margin-top:60px;
+	height:400px;
+	position: relative;
+top: 100px;}
+/*#bg2{
+	background-image: url(../images/most.png);
+	
+
+}*/
+#reg{
+	background-image: url(../images/most.png);
+	height: 900px;
+	
+}
+#rec{
+	background-image: url(../images/yy.jpg);
+	height: 900px;
+	background-repeat-x: no-repeat;
+}
+.btn-danger {
+      color: #fff;
+      background-color: #d9534f;
+      border-color: #d43f3a;
+      margin-left: 10px;
+    }
+    

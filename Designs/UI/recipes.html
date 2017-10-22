@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<title>My recipes</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+  <div class="container-fluid" id="rec">
+    <div class="row">
+       <div class="col-md-2"></div>
+       <div class="col-md-8">
+         <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<!-- FORM  -->      
+    <div class="col-md-12">
+          <form class="form-horizontal" id="form-edit-client">
+          <fieldset>
+      <!-- Form Name -->
+            <legend><h1 style=" color: white;font-size: 26px;text-align: center;font-weight: bold;font-family: cursive;margin-top: 150px;px">WELCOME TO DELICIOUS YUMMY RECIPES</h1></legend>
+            <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="client-name"><h2 style="color: white;font-size: 16px;">NAME OF FOOD</h2></label>  
+          <div class="col-md-4">
+            <input id="client-name" name="client-name" type="text" placeholder="your favourite food" class="form-control input-md">
+            <span class="help-block"><h2 style="color: white;font-size: 16px;">Full name of food</h2></span>  
+          </div>
+        </div>
+
+        <!-- Prepended text-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="client-email"><h2 style="color: white;font-size: 16px;">INGREDIENTS</h2></label>
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-addon">in</span>
+              <input id="client-email" name="client-email" class="form-control" placeholder="youringredient" type="text">
+            </div>
+            <p class="help-block"><h2 style="color: white;font-size: 16px;">ingredients</h2></p>
+          </div>
+        </div>
+        <!-- Button -->
+      </fieldset>
+    </form>
+    <div class="form-group">
+          <label class="col-md-4 control-label" for="btn-save"></label>
+          <div class="col-md-4" id="saveupdate">
+            <button id="btn-save" name="btn-save" class="btn btn-danger" onclick="addClient()">Save</button>
+          </div>
+        </div>
+     </div> 
+<!-- LIST -->
+  <div class=col-md-12>
+         <legend>
+             <h2 style="color: white;font-size: 22px;text-align: center;margin-top: 20px;">List of food types and their Ingredients</h2></legend>
+      <table class="table table-bordered table-condensed table-hover">
+        <thead>
+          <tr id="mm" style="color: white">
+            <td>Name</td>
+            <th>Ingredients</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="form-list-client-body">
+     </tbody>
+   </table>
+ </div>
+<br> 
+<!-- view -->
+<h3 style="color:white;text-align: center;"><a href="index.html"><h1 style="color: white;font-size: 18px;text-decoration: none;">BACK</h1></a></h3>
+</div>
+ <div class="col-md-2"></div>
+
+</div>
+</div>
+<!-- <script type="text/javascript">
+  var clients=[];
+  var myIndex;
+   function addClient(){
+    
+    var newClient={
+      name:document.getElementById("client-name").value,
+      email:document.getElementById("client-email").value
+    }
+    clients.push(newClient)
+    displayClients()
+  }
+function displayClients(){
+    document.getElementById("form-list-client-body").innerHTML=""
+    for (i=0;i<clients.length;i++){
+      var myTr=document.createElement("tr")
+      for(a in clients[i]){
+        var mytd=document.createElement("td")
+        mytd.innerHTML=clients[i][a]
+        myTr.appendChild(mytd)
+      }
+      var actionTd=document.createElement("td")
+      var editBtn=document.createElement("button")
+      editBtn.innerHTML="Edit"
+      editBtn.setAttribute("class" , "btn btn-sm btn-primary")
+      editBtn.setAttribute("onclick" , "editClient("+i+")")
+
+      var deletebtn=document.createElement("button")
+      deletebtn.innerHTML="Delete"
+      deletebtn.setAttribute("class" , "btn btn-sm btn-danger")
+      deletebtn.setAttribute("onclick" , "deleteClient("+i+")")
+
+      actionTd.appendChild(editBtn)
+      actionTd.appendChild(deletebtn)
+      myTr.appendChild(actionTd)
+      document.getElementById("form-list-client-body").appendChild(myTr)
+
+      }
+      document.getElementById("client-name").value="";
+      document.getElementById("client-email").value=""
+  }
+
+  //Editing Client
+  function editClient(i){
+    console.log(clients[i])
+    myIndex=i;
+    var updatebtn=document.createElement("button")
+    updatebtn.innerHTML="Update";
+    updatebtn.setAttribute("class", "btn btn-sm btn-success")
+    updatebtn.setAttribute("onclick","updClient()")
+    document.getElementById("saveupdate").innerHTML=""
+    document.getElementById("saveupdate").appendChild(updatebtn);
+    document.getElementById("client-name").value=clients[i].name
+    document.getElementById("client-email").value=clients[i].email
+  }
+
+  //Updating Client
+  function updClient(){
+    var updatedClient={
+      name:document.getElementById("client-name").value,
+      email:document.getElementById("client-email").value
+    }
+    clients[myIndex]=updatedClient;
+    var crbtn=document.createElement("button")
+    crbtn.innerHTML="Save";
+    crbtn.setAttribute("onclick","addClient()")
+    crbtn.setAttribute("class","btn btn-sm btn-success")
+    document.getElementById("saveupdate").innerHTML=""
+    
+    document.getElementById("saveupdate").appendChild(crbtn);
+    
+    displayClients()
+  }
+
+  //deleting client
+  function deleteClient(i){
+    clients.splice(i,1)
+    displayClients()
+  }
+ 
+</script> -->
+    </div>
+      </div>
+
+</body>
+</html>
